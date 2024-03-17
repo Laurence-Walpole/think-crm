@@ -1,4 +1,3 @@
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -45,7 +44,7 @@ class People_model extends CI_Model
 		$this->email_address = $email_address;
 		$this->phone_number	 = $phone_number;
 		$this->notes 		 = $notes;
-		$this->date     	 = time();
+		$this->date     	 = date("'Y-m-d H:i:s'");
 
 		$this->db->insert(self::TABLE_NAME, $this);
 		return $this;
